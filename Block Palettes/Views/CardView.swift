@@ -77,11 +77,11 @@ struct CardView: View {
                 .padding([.top, .bottom], 5)
             }
             */
-        } //ZSTack
+        }
         .frame(width: 250, height: .infinity)
         .background(.white)
         .cornerRadius(10)
-        .shadow(radius: 8)
+        .shadow(color: Color.black.opacity(0.2), radius: 8)
         .onAppear {
             withAnimation(.linear(duration: 0.4)) {
                 self.fadeIn.toggle()

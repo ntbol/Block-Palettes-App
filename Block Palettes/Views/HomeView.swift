@@ -22,7 +22,7 @@ struct HomeView: View {
                     
                     
                     Spacer()
-                    
+                    /*
                     Button("View All") {
                         openURL(URL(string: "google.com")!)
                     }
@@ -30,6 +30,7 @@ struct HomeView: View {
                     .tint(.black)
                     .padding(15)
                     .bold()
+                     */
                 }
                 
                 VStack{
@@ -52,16 +53,49 @@ struct HomeView: View {
                 .offset(x:0, y:-60)
                 
                 VStack(alignment: .leading){
-                    Text("Browse By Theme")
-                        .bold().font(.title2)
-                        .padding(.leading, 20)
-                    
+                    HStack{
+                        Text("Themes")
+                            .bold().font(.title2)
+                            .padding(.leading, 20)
+                        
+                        Spacer()
+                        
+                        Button("Browse All \(Image(systemName: "arrow.forward"))") {
+                            openURL(URL(string: "google.com")!)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.black)
+                        .padding(15)
+                        .bold()
+                    }
                     FeaturedBlocksView()
                 
                 }
                 .offset(x:0, y:-80)
                 
-                
+                VStack{
+                    HStack{
+                        Text("More Palettes")
+                            .bold().font(.title2)
+                            .padding(.leading, 20)
+                        
+                        Spacer()
+
+                        Button("Browse All \(Image(systemName: "arrow.forward"))") {
+                            openURL(URL(string: "google.com")!)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.black)
+                        .padding(15)
+                        .bold()
+                    }
+                    
+                    PaletteListView()
+                    PaletteListView()
+                    PaletteListView()
+                    PaletteListView()
+                }
+                .offset(x:0, y:-50)
             }
         }
     }

@@ -14,6 +14,7 @@
 		872F306029E1FB0F000F0109 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F305F29E1FB0F000F0109 /* HomeView.swift */; };
 		872F306329E2019E000F0109 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F306229E2019E000F0109 /* CardView.swift */; };
 		875BF77A29E24B5900D72CD3 /* FeaturedBlocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875BF77929E24B5900D72CD3 /* FeaturedBlocksView.swift */; };
+		87F420A029E37ED0007125AF /* PaletteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F4209F29E37ED0007125AF /* PaletteListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		872F305F29E1FB0F000F0109 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		872F306229E2019E000F0109 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		875BF77929E24B5900D72CD3 /* FeaturedBlocksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBlocksView.swift; sourceTree = "<group>"; };
+		87F4209F29E37ED0007125AF /* PaletteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				872F305F29E1FB0F000F0109 /* HomeView.swift */,
 				872F306229E2019E000F0109 /* CardView.swift */,
 				875BF77929E24B5900D72CD3 /* FeaturedBlocksView.swift */,
+				87F4209F29E37ED0007125AF /* PaletteListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F420A029E37ED0007125AF /* PaletteListView.swift in Sources */,
 				872F306029E1FB0F000F0109 /* HomeView.swift in Sources */,
 				87146BA329E0A46400A834B8 /* ContentView.swift in Sources */,
 				872F306329E2019E000F0109 /* CardView.swift in Sources */,
