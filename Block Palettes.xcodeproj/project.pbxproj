@@ -11,6 +11,9 @@
 		87146BA329E0A46400A834B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87146BA229E0A46400A834B8 /* ContentView.swift */; };
 		87146BA529E0A46500A834B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87146BA429E0A46500A834B8 /* Assets.xcassets */; };
 		87146BA829E0A46500A834B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87146BA729E0A46500A834B8 /* Preview Assets.xcassets */; };
+		872F306029E1FB0F000F0109 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F305F29E1FB0F000F0109 /* HomeView.swift */; };
+		872F306329E2019E000F0109 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F306229E2019E000F0109 /* CardView.swift */; };
+		875BF77A29E24B5900D72CD3 /* FeaturedBlocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875BF77929E24B5900D72CD3 /* FeaturedBlocksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		87146BA229E0A46400A834B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87146BA429E0A46500A834B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87146BA729E0A46500A834B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		872F305F29E1FB0F000F0109 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		872F306229E2019E000F0109 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		875BF77929E24B5900D72CD3 /* FeaturedBlocksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedBlocksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,10 @@
 		87146B9F29E0A46400A834B8 /* Block Palettes */ = {
 			isa = PBXGroup;
 			children = (
+				87146BB029E0BCF200A834B8 /* Views */,
+				87146BAF29E0BCEC00A834B8 /* Model */,
+				87146BAE29E0BCDD00A834B8 /* Extensions */,
 				87146BA029E0A46400A834B8 /* Block_PalettesApp.swift */,
-				87146BA229E0A46400A834B8 /* ContentView.swift */,
 				87146BA429E0A46500A834B8 /* Assets.xcassets */,
 				87146BA629E0A46500A834B8 /* Preview Content */,
 			);
@@ -65,6 +73,31 @@
 				87146BA729E0A46500A834B8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		87146BAE29E0BCDD00A834B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87146BAF29E0BCEC00A834B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87146BB029E0BCF200A834B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87146BA229E0A46400A834B8 /* ContentView.swift */,
+				872F305F29E1FB0F000F0109 /* HomeView.swift */,
+				872F306229E2019E000F0109 /* CardView.swift */,
+				875BF77929E24B5900D72CD3 /* FeaturedBlocksView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				872F306029E1FB0F000F0109 /* HomeView.swift in Sources */,
 				87146BA329E0A46400A834B8 /* ContentView.swift in Sources */,
+				872F306329E2019E000F0109 /* CardView.swift in Sources */,
+				875BF77A29E24B5900D72CD3 /* FeaturedBlocksView.swift in Sources */,
 				87146BA129E0A46400A834B8 /* Block_PalettesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Block Palettes/Preview Content\"";
+				DEVELOPMENT_TEAM = YM2D78S7L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Block Palettes/Preview Content\"";
+				DEVELOPMENT_TEAM = YM2D78S7L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
