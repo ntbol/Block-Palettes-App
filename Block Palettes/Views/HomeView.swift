@@ -36,7 +36,7 @@ struct HomeView: View {
                 VStack{
                     Text("Trending")
                         .bold().font(.title2)
-                        .padding(.leading, 20)
+                        .padding([.leading, .bottom], 20)
                 }
                 
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -71,7 +71,7 @@ struct HomeView: View {
                     FeaturedBlocksView()
                 
                 }
-                .offset(x:0, y:-80)
+                .offset(x:0, y:-90)
                 
                 VStack{
                     HStack{
@@ -90,12 +90,19 @@ struct HomeView: View {
                         .bold()
                     }
                     
-                    PaletteListView()
-                    PaletteListView()
-                    PaletteListView()
-                    PaletteListView()
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .center, spacing: 20, content: {
+                            CardView()
+                            CardView()
+                            CardView()
+                            CardView()
+                            CardView()
+                        })
+                        .padding(.leading, 20)
+                        .padding([.bottom], 60)
+                    }
                 }
-                .offset(x:0, y:-50)
+                .offset(x:0, y:-60)
             }
         }
     }
