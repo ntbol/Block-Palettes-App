@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CardView: View {
+    @StateObject var viewModel = ViewModel()
+    let palette: Palette
+    
+    
     //MARK: - Properties
     
     @State private var fadeIn: Bool = false
@@ -24,44 +28,76 @@ struct CardView: View {
             
             VStack{
                 HStack(spacing: 0) {
-                    Image("ochre_froglight")
-                        .interpolation(.none)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+
+                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockOne).png")) { image in
+                        image
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
                     
-                    Image("jungle_log")
-                        .interpolation(.none)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockTwo).png")) { image in
+                        image
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
                     
-                    Image("lime_terracotta")
-                        .interpolation(.none)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+                    
+                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockThree).png")) { image in
+                        image
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
                 }
             }
             VStack{
                 HStack(spacing: 0) {
-                    Image("raw_gold_block")
-                        .interpolation(.none)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFour).png")) { image in
+                        image
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
                     
-                    Image("spruce_planks")
-                        .interpolation(.none)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFive).png")) { image in
+                        image
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
                     
-                    Image("moss_block")
-                        .interpolation(.none)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: .infinity)
+                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockSix).png")) { image in
+                        image
+                            .interpolation(.none)
+                            .resizable()
+                            .scaledToFill()
+                            .aspectRatio(contentMode: .fit)
+                        
+                    } placeholder: {
+                        ProgressView()
+                    }
                 }
             }
             
@@ -93,7 +129,8 @@ struct CardView: View {
 //MARK: - Preview
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(palette: Palette.samplePalette)
+            .environmentObject(ViewModel())
     }
 }
 

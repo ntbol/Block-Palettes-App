@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SinglePaletteView: View {
+    @StateObject var viewModel = ViewModel()
+    let palette: Palette
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
@@ -29,44 +31,74 @@ struct SinglePaletteView: View {
                     
                     VStack{
                         HStack(spacing: 0) {
-                            Image("ochre_froglight")
-                                .interpolation(.none)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
+                            AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockOne).png")) { image in
+                                image
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                             
-                            Image("jungle_log")
-                                .interpolation(.none)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
+                            AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockTwo).png")) { image in
+                                image
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                             
-                            Image("lime_terracotta")
-                                .interpolation(.none)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
+                            AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockThree).png")) { image in
+                                image
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                         }
                     }
                     VStack{
                         HStack(spacing: 0) {
-                            Image("raw_gold_block")
-                                .interpolation(.none)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
+                            AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFour).png")) { image in
+                                image
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                             
-                            Image("spruce_planks")
-                                .interpolation(.none)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
+                            AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFive).png")) { image in
+                                image
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                             
-                            Image("moss_block")
-                                .interpolation(.none)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
+                            AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockSix).png")) { image in
+                                image
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
                         }
                     }
                 }
@@ -75,7 +107,7 @@ struct SinglePaletteView: View {
                 .padding([.leading, .trailing], 20)
                 
                 HStack{
-                    Text("Palette #12345")
+                    Text("Palette #\(palette.id)")
                         .bold().font(.title)
                     
                     Spacer()
@@ -125,6 +157,7 @@ struct SinglePaletteView: View {
 
 struct SinglePaletteView_Previews: PreviewProvider {
     static var previews: some View {
-        SinglePaletteView()
+        SinglePaletteView(palette: Palette.samplePalette)
+            .environmentObject(ViewModel())
     }
 }

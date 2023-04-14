@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var viewModel = ViewModel()
     @Environment(\.openURL) var openURL
     
     var body: some View {
@@ -33,24 +34,32 @@ struct HomeView: View {
                      */
                 }
                 
-                VStack{
+                VStack(alignment: .leading){
                     Text("Trending")
                         .bold().font(.title2)
                         .padding([.leading, .bottom], 20)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .center, spacing: 20){
+                            ForEach(viewModel.palettes, id: \.self) { palette in
+                                HStack{
+                                    
+                                    Text("Hello")
+                   
+                                    
+                                }
+                                .padding(3)
+                            }
+                        }
+                        .padding(.leading, 20)
+                        .padding([.top, .bottom], 60)
+                    }
+                    .offset(x:0, y:-60)
                 }
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .center, spacing: 20, content: {
-                        CardView()
-                        CardView()
-                        CardView()
-                        CardView()
-                        CardView()
-                    })
-                    .padding(.leading, 20)
-                    .padding([.top, .bottom], 60)
+                .onAppear {
+                    viewModel.fetch()
                 }
-                .offset(x:0, y:-60)
+        
                 
                 VStack(alignment: .leading){
                     HStack{
@@ -92,11 +101,7 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .center, spacing: 20, content: {
-                            CardView()
-                            CardView()
-                            CardView()
-                            CardView()
-                            CardView()
+                         
                         })
                         .padding(.leading, 20)
                         .padding([.bottom], 60)
