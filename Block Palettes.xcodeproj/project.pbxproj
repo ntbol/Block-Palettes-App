@@ -20,6 +20,7 @@
 		8798122529E9D926008EF044 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8798122429E9D926008EF044 /* ViewModel.swift */; };
 		8798122829EA1FB6008EF044 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8798122729EA1FB6008EF044 /* CachedAsyncImage */; };
 		8798122A29EC7C32008EF044 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8798122929EC7C32008EF044 /* Extension.swift */; };
+		8798123029ECBD45008EF044 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8798122F29ECBD45008EF044 /* Launch Screen.storyboard */; };
 		87F420A029E37ED0007125AF /* PaletteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F4209F29E37ED0007125AF /* PaletteListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,8 @@
 		8798121B29E9D46E008EF044 /* PaletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaletteModel.swift; path = "Block Palettes/Helpers/PaletteModel.swift"; sourceTree = SOURCE_ROOT; };
 		8798122429E9D926008EF044 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8798122929EC7C32008EF044 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = "Block Palettes/ViewModels/Extension.swift"; sourceTree = SOURCE_ROOT; };
+		8798122E29ECBBA3008EF044 /* Block-Palettes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Block-Palettes-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8798122F29ECBD45008EF044 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		87F4209F29E37ED0007125AF /* PaletteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +74,7 @@
 		87146B9F29E0A46400A834B8 /* Block Palettes */ = {
 			isa = PBXGroup;
 			children = (
+				8798122E29ECBBA3008EF044 /* Block-Palettes-Info.plist */,
 				8798122329E9D915008EF044 /* ViewModels */,
 				87146BB029E0BCF200A834B8 /* Views */,
 				87146BAF29E0BCEC00A834B8 /* Model */,
@@ -78,6 +82,7 @@
 				87146BA029E0A46400A834B8 /* Block_PalettesApp.swift */,
 				87146BA429E0A46500A834B8 /* Assets.xcassets */,
 				87146BA629E0A46500A834B8 /* Preview Content */,
+				8798122F29ECBD45008EF044 /* Launch Screen.storyboard */,
 			);
 			path = "Block Palettes";
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8798123029ECBD45008EF044 /* Launch Screen.storyboard in Resources */,
 				87146BA829E0A46500A834B8 /* Preview Assets.xcassets in Resources */,
 				87146BA529E0A46500A834B8 /* Assets.xcassets in Resources */,
 			);
@@ -346,9 +352,11 @@
 				DEVELOPMENT_TEAM = YM2D78S7L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Block-Palettes-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -375,9 +383,11 @@
 				DEVELOPMENT_TEAM = YM2D78S7L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Block-Palettes-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

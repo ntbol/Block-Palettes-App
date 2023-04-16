@@ -103,7 +103,7 @@ struct HomeView: View {
                                 let lowInt = randomInt - 13
                                 ForEach(viewModel.palettes, id: \.self) { palette in
                                 
-                                    if(lowInt...randomInt ~= palette.id) {
+                                    if(1...12 ~= palette.id) {
                                         HStack{
                                             NavigationLink(destination: SinglePaletteView(palette: palette)){
                                                 CardView(palette: palette)
