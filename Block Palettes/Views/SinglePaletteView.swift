@@ -112,41 +112,32 @@ struct SinglePaletteView: View {
                     
                     Spacer()
                     
-                    Button("\(Image(systemName: "heart.fill")) 231") {
-                        
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.red)
-                    .bold()
-                }
-                .padding([.leading, .trailing], 20)
-                .padding(.top, 15)
-                
-                HStack{
-                    Image("lime_terracotta")
-                        .resizable()
-                        .frame(width: 35, height: 35)
-                        .cornerRadius(5)
-                    Text("MinecraftFan123")
-                        .bold()
-                    
-                    Spacer()
-                    
                     Text("3 months ago")
                 }
                 .padding([.leading, .trailing], 20)
-                .padding(.bottom, 30)
+                .padding([.top, .bottom], 15)
+                
                 
                 VStack(alignment: .leading){
                     Text("Blocks Used")
                         .bold().font(.title2)
                     
-                    BlocksUsedView()
-                    BlocksUsedView()
-                    BlocksUsedView()
-                    BlocksUsedView()
-                    BlocksUsedView()
-                    BlocksUsedView()
+                    HStack{
+                        AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockOne).png")) { image in
+                            image
+                                .interpolation(.none)
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .cornerRadius(5)
+                                .padding(.trailing, 10)
+                            
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        
+                        Text(palette.blockOne)
+                            .bold().font(.title3)
+                    }
                     
                 }
                 .padding([.leading, .trailing], 20)

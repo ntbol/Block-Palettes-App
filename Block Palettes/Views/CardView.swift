@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct CardView: View {
     @StateObject var viewModel = ViewModel()
@@ -29,7 +30,7 @@ struct CardView: View {
             VStack{
                 HStack(spacing: 0) {
 
-                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockOne).png")) { image in
+                    CachedAsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockOne).png")) { image in
                         image
                             .interpolation(.none)
                             .resizable()
@@ -40,7 +41,7 @@ struct CardView: View {
                         ProgressView()
                     }
                     
-                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockTwo).png")) { image in
+                    CachedAsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockTwo).png")) { image in
                         image
                             .interpolation(.none)
                             .resizable()
@@ -52,7 +53,7 @@ struct CardView: View {
                     }
                     
                     
-                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockThree).png")) { image in
+                    CachedAsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockThree).png")) { image in
                         image
                             .interpolation(.none)
                             .resizable()
@@ -66,7 +67,7 @@ struct CardView: View {
             }
             VStack{
                 HStack(spacing: 0) {
-                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFour).png")) { image in
+                    CachedAsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFour).png")) { image in
                         image
                             .interpolation(.none)
                             .resizable()
@@ -77,7 +78,7 @@ struct CardView: View {
                         ProgressView()
                     }
                     
-                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFive).png")) { image in
+                    CachedAsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockFive).png")) { image in
                         image
                             .interpolation(.none)
                             .resizable()
@@ -88,7 +89,7 @@ struct CardView: View {
                         ProgressView()
                     }
                     
-                    AsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockSix).png")) { image in
+                    CachedAsyncImage(url: URL(string: "https://www.blockpalettes.com/img/block/\(palette.blockSix).png")) { image in
                         image
                             .interpolation(.none)
                             .resizable()
@@ -119,7 +120,7 @@ struct CardView: View {
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.2), radius: 8)
         .onAppear {
-            withAnimation(.linear(duration: 0.4)) {
+            withAnimation(.linear(duration: 1)) {
                 self.fadeIn.toggle()
             }
         }
