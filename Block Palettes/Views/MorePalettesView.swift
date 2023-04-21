@@ -17,7 +17,7 @@ struct MorePalettesView: View {
                 ForEach(viewModel.palettes, id: \.self) { palette in
                     
                     if(lowInt...randomInt ~= palette.id) {
-                        NavigationLink(destination: SinglePaletteView(palette: palette)){
+                        NavigationLink(destination: SinglePaletteView(palette: palette).navigationBarBackButtonHidden(true)){
                             PaletteListView(palette: palette)
                         }
                     }
