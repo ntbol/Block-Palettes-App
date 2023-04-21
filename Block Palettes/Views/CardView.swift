@@ -115,7 +115,7 @@ struct CardView: View {
             }
             */
         }
-        .frame(width: 250, height: .infinity)
+        .frame(width: 250)
         .background(.white)
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.2), radius: 8)
