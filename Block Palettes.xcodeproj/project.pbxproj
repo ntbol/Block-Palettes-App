@@ -22,6 +22,7 @@
 		8798122829EA1FB6008EF044 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8798122729EA1FB6008EF044 /* CachedAsyncImage */; };
 		8798122A29EC7C32008EF044 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8798122929EC7C32008EF044 /* Extension.swift */; };
 		8798123029ECBD45008EF044 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8798122F29ECBD45008EF044 /* Launch Screen.storyboard */; };
+		87B0758129F6DBEA00542B45 /* BrowseAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0758029F6DBEA00542B45 /* BrowseAllView.swift */; };
 		87F420A029E37ED0007125AF /* PaletteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F4209F29E37ED0007125AF /* PaletteListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		8798122929EC7C32008EF044 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = "Block Palettes/ViewModels/Extension.swift"; sourceTree = SOURCE_ROOT; };
 		8798122E29ECBBA3008EF044 /* Block-Palettes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Block-Palettes-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8798122F29ECBD45008EF044 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		87B0758029F6DBEA00542B45 /* BrowseAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAllView.swift; sourceTree = "<group>"; };
 		87F4209F29E37ED0007125AF /* PaletteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 				8758502729E742CE00193973 /* SinglePaletteView.swift */,
 				8798121629E8A8B3008EF044 /* TestView.swift */,
 				8732C2A629F3139600A32B82 /* MorePalettesView.swift */,
+				87B0758029F6DBEA00542B45 /* BrowseAllView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				8798121729E8A8B3008EF044 /* TestView.swift in Sources */,
 				875BF77A29E24B5900D72CD3 /* FeaturedBlocksView.swift in Sources */,
 				87146BA129E0A46400A834B8 /* Block_PalettesApp.swift in Sources */,
+				87B0758129F6DBEA00542B45 /* BrowseAllView.swift in Sources */,
 				8798121C29E9D46E008EF044 /* PaletteModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -88,8 +88,8 @@ struct HomeView: View {
                             
                             Spacer()
                             
-                            Button("Browse All \(Image(systemName: "arrow.forward"))") {
-                                openURL(URL(string: "google.com")!)
+                            NavigationLink(destination: BrowseAllView()) {
+                                Text("Browse All \(Image(systemName: "arrow.forward"))")
                             }
                             .buttonStyle(.borderedProminent)
                             .tint(.black)
@@ -99,8 +99,7 @@ struct HomeView: View {
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(alignment: .center, spacing: 20, content: {
-                                let randomInt = Int.random(in: 3..<10000)
-                                let lowInt = randomInt - 13
+                               
                                 ForEach(viewModel.palettes, id: \.self) { palette in
                                 
                                     if(1...12 ~= palette.id) {
